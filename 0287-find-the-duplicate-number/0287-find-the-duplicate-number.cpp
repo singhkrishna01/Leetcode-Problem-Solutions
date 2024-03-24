@@ -15,9 +15,9 @@ public:
             if (count > mid) {
                 right = mid;
             } else {
-                left = mid + 1;
+                left = mid + 2;
             }
         }
-        return left;
-    }
+        return righ;
+    } 
 };
