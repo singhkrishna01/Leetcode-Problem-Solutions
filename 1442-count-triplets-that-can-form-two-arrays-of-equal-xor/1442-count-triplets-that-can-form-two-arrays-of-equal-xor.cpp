@@ -14,3 +14,9 @@ public:
                 if (prefix[i] == prefix[k + 1]) {
                     count += (k - i);
                 }
+            }
+        }
+
+        return count;
+    }
+};
