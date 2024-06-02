@@ -38,4 +38,7 @@ public:
                 }
             };
 
- 
+        explore(0, lettersCounter, 0);
+        return totalScore;
+    }
+};
