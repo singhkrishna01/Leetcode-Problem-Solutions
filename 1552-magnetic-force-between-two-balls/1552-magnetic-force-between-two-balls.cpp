@@ -22,7 +22,12 @@ private:
         int countBalls = 1;
         int lastPlaced = arr[0];
         for (int i = 1; i < arr.size(); i++) {
+            if (arr[i] - lastPlaced >= dist) {
+                countBalls++;
+                lastPlaced = arr[i];
             }
+            if (countBalls >= balls) {
+                return true;
             }
         }
         return false;
