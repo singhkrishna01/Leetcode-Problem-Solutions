@@ -23,7 +23,9 @@ public:
 private:
     void dfs(vector<vector<int>>& graph, int parent, int curr, vector<vector<int>>& res, vector<bool>& visit) {
         visit[curr] = true;
-       
+        for (int dest : graph[curr]) {
+            if (!visit[dest]) {
+                res[dest].push_back(parent);
                 dfs(graph, parent, dest, res, visit);
             }
         }
