@@ -16,6 +16,7 @@ public:
                 }
                 isFlipped[i] = 1;
                 flipped ^= 1;
+                res++;
             }
         }
 
