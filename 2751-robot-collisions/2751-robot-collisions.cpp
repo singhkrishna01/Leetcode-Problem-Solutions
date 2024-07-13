@@ -42,7 +42,8 @@ public:
         }
 
         // Collect surviving robots
-        
+        for (int index = 0; index < n; ++index) {
+            if (healths[index] > 0) {
                 result.push_back(healths[index]);
             }
         }
