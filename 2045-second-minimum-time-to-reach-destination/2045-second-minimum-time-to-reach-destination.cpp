@@ -62,10 +62,9 @@ public:
             }
             wave++;
 
-            if (maxLength < wave)
-                break;
+          
         }
 
-        
+        return howLong(maxLength, time, change);
     }
 };
