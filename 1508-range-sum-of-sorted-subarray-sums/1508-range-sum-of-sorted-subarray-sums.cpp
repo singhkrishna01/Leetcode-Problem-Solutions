@@ -11,7 +11,9 @@ public:
         }
         sort(arr, arr + n * (n + 1) / 2);
         int ans = 0;
-        
+        const int mod = 1e9 + 7;
+        for (int i = left - 1; i < right; ++i) {
+            ans = (ans + arr[i]) % mod;
         }
         return ans;
     }
