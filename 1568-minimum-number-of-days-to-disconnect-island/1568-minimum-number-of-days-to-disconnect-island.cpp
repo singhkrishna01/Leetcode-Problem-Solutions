@@ -5,6 +5,10 @@ public:
             vector<vector<int>> seen(grid.size(), vector<int>(grid[0].size(), 0));
             int islands = 0;
             
+            function<void(int, int)> dfs = [&](int r, int c) {
+                
+                seen[r][c] = 1;
+                for (auto [dr, dc] : {pair{-1, 0}, {1, 0}, {0, -1}, {0, 1}}) {
                     int nr = r + dr, nc = c + dc;
                     if (nr >= 0 && nr < grid.size() && nc >= 0 && nc < grid[0].size() && grid[nr][nc] == 1 && !seen[nr][nc]) {
                         dfs(nr, nc);
