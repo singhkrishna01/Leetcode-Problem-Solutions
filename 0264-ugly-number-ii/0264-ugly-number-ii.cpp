@@ -12,7 +12,10 @@ public:
         for (int i = 0; i < n; ++i) {
             curr = uglyHeap.top();
             uglyHeap.pop();
-           
+            for (int prime : primes) {
+                long new_ugly = curr * prime;
+                if (visited.find(new_ugly) == visited.end()) {
+                    uglyHeap.push(new_ugly);
                     visited.insert(new_ugly);
                 }
             }
