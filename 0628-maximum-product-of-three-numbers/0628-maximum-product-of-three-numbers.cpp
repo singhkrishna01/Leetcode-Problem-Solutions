@@ -18,7 +18,12 @@ public:
             }
             
             // Update the two smallest values
-           
+            if (num < min1) {
+                min2 = min1;
+                min1 = num;
+            } else if (num < min2) {
+                min2 = num;
+            }
         }
         
         // Maximum product is the maximum of the product of the three largest
