@@ -15,7 +15,8 @@ public:
                     maxProb[v] = maxProb[u] * prob;
                     updated = true;
                 }
-               
+                if (maxProb[v] * prob > maxProb[u]) {
+                    maxProb[u] = maxProb[v] * prob;
                     updated = true;
                 }
             }
