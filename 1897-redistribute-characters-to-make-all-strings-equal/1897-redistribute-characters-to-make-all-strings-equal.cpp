@@ -17,7 +17,8 @@ public:
         }
 
         // Check if the count of each character is divisible by the total number of words.
-        
+        for (int count : characterCount) {
+            if (count % words.size() != 0) {
                 // If not divisible, characters cannot be rearranged to make all words equal.
                 return false;
             }
