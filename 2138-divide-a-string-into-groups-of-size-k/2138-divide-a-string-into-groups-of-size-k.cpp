@@ -1,11 +1,6 @@
 class Solution {
 public:
     vector<string> divideString(string s, int k, char fill) {
-        
-    }
-};aclass Solution {
-public:
-    vector<string> divideString(string s, int k, char fill) {
         vector<string>ans;
         string ki;
         int c=0;
@@ -27,6 +22,11 @@ public:
 
         }
 
+        int o=ki.length();
+        int y=k-o;
+
+        for(int i=0;i<y;i++)
+        {
             ki.push_back(fill);
         }
         ans.push_back(ki);
