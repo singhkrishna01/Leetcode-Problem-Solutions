@@ -14,8 +14,11 @@ public:
         vector<ListNode*> ans(k);
 
         // get total size of linked list
-        
-           
+        int size = 0;
+        ListNode* current = head;
+        while (current != nullptr) {
+            size++;
+            current = current->next;
         }
 
         // minimum size for the k parts
