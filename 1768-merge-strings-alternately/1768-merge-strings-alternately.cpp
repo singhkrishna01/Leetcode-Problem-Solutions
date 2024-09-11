@@ -3,16 +3,19 @@ public:
     string mergeAlternately(string word1, string word2) {
         string result = "";
         int i = 0;
-        while (i < word1.length() || i < word2.length()) {
-            if (i < word1.length()) {
-                result += word1[i];
+        int  j = 0;
+        int n1 = word1.size();
+        int n2 = word2.size();
+        while (i < n1 or j < n2){
+            if(i < n1){
+                result+=word1[i];
+                i++;
             }
-            if (i < word2.length()) {
-                result += word2[i];
+            if (j < n2){
+                result+=word2[j];
+                j++;
             }
-            i++;
         }
         return result;
-        
     }
 };
