@@ -24,7 +24,15 @@ public:
         for(int i=0; i<s.length(); i++) if(s[i] >= 'a' && s[i] <= 'z') t1[s[i] - 'a']++; 
         for(int i=0; i<s.length(); i++) if(s[i] >= 'A' && s[i] <= 'Z') t2[s[i] - 'A']++; 
       
+
+        for(int i=0; i<26; i++){
+            if(t1[i] == 0 && t2[i] == 0) continue; 
+            else if(t1[i] == 0 && t2[i] > 0) m[i + 'A']++; 
+            else if(t1[i] > 0 && t2[i] == 0) m[i + 'a']++; 
         } 
+
+
+
         vector<string> ans; string temp = ""; 
         for(int i=0; i<s.length(); i++){
             if(m.find(s[i]) == m.end()) temp += s[i]; 
