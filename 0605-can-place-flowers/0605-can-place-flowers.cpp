@@ -13,7 +13,11 @@ public:
             if(p==3){
                 n--;
                 p=1;
-           
+            }
+            else if(p==2 && i==f.size()-1){
+                n--;
+            }
+            if(n==0) return true;
         }
         return n==0; 
     }
