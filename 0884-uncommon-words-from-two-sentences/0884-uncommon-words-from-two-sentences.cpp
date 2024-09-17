@@ -1,36 +1,33 @@
 class Solution {
 public:
     vector<string> uncommonFromSentences(string s1, string s2) {
-        string s = s1 + " " + s2;
+        unordered_map<string, int>mp1;
 
-        cout<<s1.max_size();
-
-      
-        for(auto& val : s){
-            if(val == ' '){
-                um[tmp]++;
-                tmp = "";
+        int i = 0;
+        while(i < s1.size()){
+            string temp = "";
+            while(s1[i] != ' ' && i < s1.size()){
+                temp += s1[i];
+                i++;
             }
-            else{
-                tmp += val;
+            mp1[temp]++;
+            i++;
+        }
+        i = 0;
+        while(i < s2.size()){
+            string temp = "";
+            while(s2[i] != ' ' && i < s2.size()){
+                temp += s2[i];
+                i++;
             }
+            mp1[temp]++;
+            i++;
         }
-        
-        if(tmp != ""){
-            um[tmp]++;
-            tmp = "";
+        vector<string>ans;
+        for(auto i : mp1){
+            if(mp1[i.first] == 1)
+            ans.push_back(i.first);
         }
-
-        vector<string> ans;
-        for(auto& val:um){
-
-
-            if(val.second==1){
-                ans.emplace_back(val.first);              
-            }
-
-        }
-
         return ans;
     }
 };
