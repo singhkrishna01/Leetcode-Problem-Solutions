@@ -10,6 +10,9 @@ public:
             if(nums[i]<=res1){
                 res1=nums[i];
             }
+            else if(nums[i]<=res2){
+                res2=nums[i];
+            }
             else{
                 return true;
             }
