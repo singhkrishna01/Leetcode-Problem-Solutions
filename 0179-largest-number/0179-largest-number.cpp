@@ -8,7 +8,7 @@ public:
         sort(nums.begin(), nums.end(), cmp);
         string ans = "";
         for(auto it :nums){
-           
+            ans+=to_string(it);
         }   
         return ans[0]=='0'?"0":ans ;
     }
