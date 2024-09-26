@@ -14,6 +14,7 @@ public:
                 if(count<=k)
                 {
                 int window=high-low+1;
+                maxi=max(maxi,window);
                 }
                 high++;
 
