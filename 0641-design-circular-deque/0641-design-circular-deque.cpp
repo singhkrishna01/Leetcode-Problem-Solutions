@@ -54,6 +54,8 @@ public:
             return 1;
         }
         else{
+            temp->next=tail->next;
+            tail->next=temp;
             temp->prev=tail;
             tail=temp;
             len++;
