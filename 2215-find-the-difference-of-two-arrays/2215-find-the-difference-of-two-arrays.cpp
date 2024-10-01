@@ -21,6 +21,7 @@ public:
         va.clear();
         for(int i=0;i<nums2.size();i++)
         {
+            int a=nums2[i];
             if(mp[a]<2)
             {
                 va.push_back(a);
