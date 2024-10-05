@@ -19,7 +19,7 @@ public:
             res+=str.top();
             str.pop();
         }
-        reverse(res.begin(),res());
+        reverse(res.begin(),res.end());
         return res;
     }
 };
