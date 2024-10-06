@@ -1,33 +1,56 @@
 class Solution {
 public:
-    bool areSentencesSimilar(string sen1, string sen2) {
-        
-        if(sen2.size()>sen1.size()) swap(sen1 , sen2);
-        
-         vector<string> s1;
-         vector<string> s2;
-        stringstream mystream2(sen2);
-        string word;
-        while(mystream1 >> word)
-        {
-           s1.push_back(word);
+    bool areSentencesSimilar(string sentence1, string sentence2) {  
+        vector<string> wordS1 = splitInWords(sentence1);
+        vector<string> wordS2 = splitInWords(sentence2);
+        vector<string> min, max;
+        if (wordS1.size() > wordS2.size()) {
+            min = wordS2; max = wordS1;
+        } else {
+            min = wordS1; max = wordS2;
         }
-        while(mystream2 >> word)
-        {
-         s2.push_back(word);
+        bool normal = checkSimilarity(min, max);
+        reverse(min.begin(), min.end());
+        reverse(max.begin(), max.end());
+        bool bothReverse = checkSimilarity(min, max);
+        
+        return normal || bothReverse;
+    }
+    bool checkSimilarity(vector<string>& min, vector<string>& max) {
+        bool miss = false;
+        int j = 0;
+        for(int i = 0; i < min.size(); i++) {
+            if (j < max.size() && min[i] == max[j]) {        
+                j++;
+                continue;
+            }
+            if (miss)
+                return false;
+            
+            miss = true;
+            while(j < max.size() && min[i] != max[j])
+                j++;
+            if (j >= max.size()) 
+                return false;
+            if (j < max.size() && min[i] == max[j])
+                j++;
+            
         }
-         int i = 0;
-         int j = s2.size()-1;
-         for(int k = 0 ; k<s1.size() ; k++)
-         {
-            if(i<s2.size() && s1[k] == s2[i]) i++;
-            else break;
-         }
-         for(int k = s1.size()-1 ; k>=0 ; k--)
-         {
-            if(j>=0 && s1[k] == s2[j]) j--;
-            else break;
-         }
-        return i>j;
+        return j == max.size() || !miss;
+    }
+    vector<string> splitInWords(string s) {
+        vector<string> result;
+        string current = "";
+        for (int i = 0; i < s.size(); i++) {
+            if (s[i] == ' ') {
+                result.push_back(current);
+                current = "";
+                continue;
+            } else {
+                current.push_back(s[i]);
+            }
+        }
+        result.push_back(current);
+        return result;
     }
 };
