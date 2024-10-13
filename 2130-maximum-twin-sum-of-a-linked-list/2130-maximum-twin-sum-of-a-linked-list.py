@@ -20,6 +20,8 @@ class Solution:
         while curr:
             next_node = curr.next
             curr.next = prev
+            prev = curr
+            curr = next_node
 
         slow.next = fast
         slow = head
