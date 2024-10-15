@@ -4,7 +4,7 @@ class Solution:
             if not node:
                 return []
 
-            if not node.right and not node.left:
+            if not node.right and not node.right:
                 return [node.val]
 
             return dfs(node.left) + dfs(node.right)
