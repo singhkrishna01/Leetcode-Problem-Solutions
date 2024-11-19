@@ -9,5 +9,4 @@ public:
         }
     return int(res);
     }
-
 };
