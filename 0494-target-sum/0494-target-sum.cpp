@@ -1,37 +1,36 @@
 class Solution {
 public:
-    int f(vector<int>& nums,int target, int n, vector<vector<int>>&dp){
-          if (n==0) {
-            if (target==0 && nums[n]==0) return 2;
-            if (nums[n]==target || target==0) return 1;
-            return 0;
+    void computeSums(const vector<int>& nums, int start, int end,  vector<long long>& sums) {
+        sums.push_back(0);
+        for (int i = start; i < end; ++i) {
+            int num = nums[i];
+            int n = sums.size();
+            for (int j = 0; j < n; ++j) {
+                sums.push_back(sums[j] + num);
+                sums[j] -= num;
+            }
         }
-      
-      
-         if(dp[n][target]!=-1)
-         return dp[n][target];
-
-        int notpick=f(nums,target,n-1,dp);
-        int pick=0;
-        if(nums[n]<=target){
-            pick=f(nums,target-nums[n],n-1,dp);
-        }
-        return dp[n][target]=pick+notpick;
     }
+
     int findTargetSumWays(vector<int>& nums, int target) {
-         int k=0;
-        for(int i=0;i<nums.size();i++){
-            k+=nums[i];
+        int n = nums.size();
+        int mid = n / 2;
+        vector<long long> sums1;
+        vector<long long> sums2;
+        computeSums(nums, 0, mid, sums1);
+        computeSums(nums, mid, n, sums2);
+        unordered_map<long long, long long> countMap;
+        for (auto sum : sums2) {
+            countMap[sum]++;
         }
-        target=(k-target);
-        if(target<0)
-        return 0;
-        
-        vector<vector<int>>dp(nums.size(),vector<int>((target/2)+1,-1));
-        if(target%2!=0)
-        return 0;
-        return f(nums,target/2,nums.size()-1,dp);
+        long long total = 0;
+        for (auto sum : sums1) {
+            long long complement = (long long)target - sum;
+            if (countMap.find(complement) != countMap.end()) {
+                total += countMap[complement];
+            }
+        }
+
+        return total;
     }
 };
-        
- 
