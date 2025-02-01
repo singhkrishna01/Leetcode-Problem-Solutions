@@ -1,21 +1,18 @@
 class Solution {
 public:
     bool isArraySpecial(vector<int>& nums) {
-        if (nums.size() < 2)
-            return true;
-
-        bool isEven = nums[0] % 2 == 0;
-        for (int i = 1; i < nums.size(); i++) {
-            if ((nums[i] % 2 == 0) == isEven)
-                return false;
-            isEven = !isEven;
+        int con=1,n=nums.size(); 
+        if(nums[0]&1)con=0; 
+        else con=1;
+        for(int i=1;i<n;++i){
+          if(!con and nums[i]%2==0){
+             con^=1;   
+          }  
+          else if(con and nums[i]&1){
+            con^=1;
+          }
+          else return false;
         }
         return true;
     }
 };
-auto init = []() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    return 'c';
-}();
