@@ -17,6 +17,7 @@ public:
                     used[1] = false;
                 } else if (idx + num < res.size() && res[idx + num] == 0) {
                     res[idx] = res[idx + num] = num;
+                    used[num] = true;
                     if (backtrack(idx + 1)) return true;
                     res[idx] = res[idx + num] = 0;
                     used[num] = false;
