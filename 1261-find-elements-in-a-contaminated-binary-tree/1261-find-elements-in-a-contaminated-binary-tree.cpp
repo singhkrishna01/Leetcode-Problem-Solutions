@@ -13,6 +13,7 @@ class FindElements {
       return;
     }
     root->val = val;
+    vals.insert(val);
     dfs(root->left, val * 2 + 1);
     dfs(root->right, val * 2 + 2);
   }
