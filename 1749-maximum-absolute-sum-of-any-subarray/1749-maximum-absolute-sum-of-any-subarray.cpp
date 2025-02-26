@@ -1,17 +1,19 @@
 class Solution {
 public:
     int maxAbsoluteSum(vector<int>& nums) {
-    int n = nums.size();
-    int max_sum = 0;
-
-    for (int i = 0; i < n; ++i) {
-        int current_sum = 0;
-        for (int j = i; j < n; ++j) {
-            current_sum += nums[j];
-            max_sum = max(max_sum, abs(current_sum));
+        int n=nums.size();
+        int minNeg=INT_MAX;
+        int maxPos=INT_MIN;
+        int sum=0;
+        for(int it:nums)
+        {
+            sum+=it;
+            minNeg=min(minNeg,sum);
+            maxPos=max(maxPos,sum);
         }
+        if(maxPos>=0 && minNeg<=0) return maxPos-minNeg;
+        if(maxPos<0) return abs(minNeg);
+        if(minNeg>0) return maxPos;
+        return -1;
     }
-
-    return max_sum;
-}
 };
