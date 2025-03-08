@@ -15,6 +15,8 @@ public:
                 White--;
             if (blocks[j] == 'W') 
                 White++;
+            
+            ans = min(ans, White);
             i++, j++;
         }
 
