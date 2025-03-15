@@ -15,6 +15,7 @@ public:
         auto [min, max]=minmax_element(nums.begin(), nums.end());
         int l=*min, r=*max, m;
         while(l<r){
+            m=(l+r)/2;
             if (f(nums, n, k, m))
                 r=m;
             else
