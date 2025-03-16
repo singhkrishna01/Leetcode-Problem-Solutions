@@ -8,6 +8,7 @@ public:
 
         while(l<=h){
             long long m = l+(h-l)/2;
+            long long count=0;
             for(auto ele: ranks){
                 count+=sqrt(m/ele);
             }
