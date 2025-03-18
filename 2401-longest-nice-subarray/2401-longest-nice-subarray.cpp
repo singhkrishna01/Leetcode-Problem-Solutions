@@ -6,6 +6,7 @@ public:
         for(int l=0, r=0; r<n; r++){
             int x=nums[r];
             while(l<r && (B& x)!=0) B^=nums[l++];
+            B|=x;
             ans=max(ans, r-l+1);
         }
         return ans;
