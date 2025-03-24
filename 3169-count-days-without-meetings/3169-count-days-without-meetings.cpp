@@ -4,6 +4,7 @@ public:
         sort(meetings.begin(), meetings.end());
 
         vector<vector<int>> mergedMeetings;
+        for (const auto& meeting : meetings) {
             if (mergedMeetings.empty() || meeting[0] > mergedMeetings.back()[1]) {
                 mergedMeetings.push_back(meeting);
             } else {
