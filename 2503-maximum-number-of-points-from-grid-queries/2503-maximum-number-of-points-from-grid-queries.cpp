@@ -3,6 +3,7 @@ public:
     vector<int> maxPoints(vector<vector<int>>& grid, vector<int>& queries) {
         int rows = grid.size(), cols = grid[0].size();
         vector<int> ans(queries.size(), 0);
+        vector<vector<bool>> visited(rows, vector<bool>(cols, false));
         
         vector<pair<int, int>> directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
         
