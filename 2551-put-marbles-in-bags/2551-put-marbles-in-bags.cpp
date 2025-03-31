@@ -4,7 +4,8 @@ public:
         if (k == 1) {
             return 0;
         }
-        
+
+        vector<int> pair_sums;
         for (size_t i = 0; i < weights.size() - 1; ++i) {
             pair_sums.push_back(weights[i] + weights[i + 1]);
         }
