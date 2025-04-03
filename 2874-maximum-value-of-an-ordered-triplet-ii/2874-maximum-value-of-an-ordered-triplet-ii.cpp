@@ -5,6 +5,7 @@ public:
         long long res = 0;
         
         for (int i = 0; i < n; i++) {
+            maxi = max(maxi, nums[i]);
             if (i >= 2)
                 res = max(res, (long long)diff * nums[i]);
             if (i >= 1)
