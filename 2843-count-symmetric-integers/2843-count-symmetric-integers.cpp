@@ -5,6 +5,7 @@ public:
         for (int num = low; num <= high; num++) {
             string s = to_string(num);
             int n = s.size();
+            if (n % 2 != 0) continue;
             int mid = n / 2, left = 0, right = 0;
             for (int i = 0; i < mid; i++) {
                 left += s[i] - '0';
