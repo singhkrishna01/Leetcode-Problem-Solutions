@@ -3,6 +3,7 @@ public:
     const long long mod=1e9+7;
     long long powMod(long long x, long long exp){
         if (exp==0) return 1;
+        long long y=(exp&1)?x:1;
         return y*powMod(x*x%mod, exp>>1)%mod;
     }
     int countGoodNumbers(long long n) {
