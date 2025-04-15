@@ -3,6 +3,7 @@ public:
     long long goodTriplets(vector<int>& nums1, vector<int>& nums2) {
         int n = nums1.size();
         vector<int> position(n, 0), reindex(n, 0);
+        for (int i = 0; i < n; i++) {
             position[nums2[i]] = i;
         }
         for (int i = 0; i < n; i++) {
