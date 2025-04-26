@@ -5,6 +5,7 @@ public:
         int bad_idx = -1, left_idx = -1, right_idx = -1;
 
         for (int i = 0; i < nums.size(); ++i) {
+            if (!(minK <= nums[i] && nums[i] <= maxK)) {
                 bad_idx = i;
             }
 
