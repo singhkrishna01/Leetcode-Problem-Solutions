@@ -6,6 +6,7 @@ public:
         while(right<nums.size() || left>right){
             if(nums[right] == max_num)count++;
             while(count>=k){
+                if(nums[left]==max_num)count--;
                 left++;
                 ans += nums.size()-right;
             }    
