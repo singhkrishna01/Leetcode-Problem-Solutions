@@ -4,6 +4,7 @@ class Solution:
         for r, x in enumerate(nums):
             zeros+=(x==0)
             if zeros>1:
+                zeros-=(nums[l]==0)
                 l+=1
             ans=max(ans, r-l)
         return ans
