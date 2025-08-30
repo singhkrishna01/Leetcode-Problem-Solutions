@@ -2,9 +2,10 @@ class Solution:
     def isValidSudoku(self, board: list[list[str]]) -> bool:
         for row in range(9):
             for col in range(9):
+                if board[row][col] != '.':
                     if not self.isSafe(board, row, col, board[row][col]):
                         return False
-        return True.
+        return True
 
     def isSafe(self, sudoku: list[list[str]], row: int, col: int, digit: str) -> bool:
         for i in range(9):
