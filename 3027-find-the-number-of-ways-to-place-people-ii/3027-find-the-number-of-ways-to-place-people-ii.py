@@ -6,5 +6,6 @@ class Solution(object):
             b=float('-inf')
             for xj, yj in points[i+1:]:
                 if yi>=yj>b:
+                    c+=1
                     b=yj
         return c
