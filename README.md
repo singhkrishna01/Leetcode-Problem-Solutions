@@ -69,6 +69,7 @@ Happy Coding!
 |  |
 | ------- |
 | [0611-valid-triangle-number](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/0611-valid-triangle-number) |
+| [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
 ## Two Pointers
 |  |
 | ------- |
@@ -81,8 +82,14 @@ Happy Coding!
 |  |
 | ------- |
 | [0611-valid-triangle-number](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/0611-valid-triangle-number) |
+| [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
 ## Sorting
 |  |
 | ------- |
 | [0611-valid-triangle-number](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/0611-valid-triangle-number) |
+| [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
+## Math
+|  |
+| ------- |
+| [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
 <!---LeetCode Topics End-->
