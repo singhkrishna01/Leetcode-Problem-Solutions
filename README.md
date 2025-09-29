@@ -70,6 +70,7 @@ Happy Coding!
 | ------- |
 | [0611-valid-triangle-number](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/0611-valid-triangle-number) |
 | [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
+| [1111-minimum-score-triangulation-of-polygon](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1111-minimum-score-triangulation-of-polygon) |
 ## Two Pointers
 |  |
 | ------- |
@@ -92,4 +93,8 @@ Happy Coding!
 |  |
 | ------- |
 | [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
+## Dynamic Programming
+|  |
+| ------- |
+| [1111-minimum-score-triangulation-of-polygon](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1111-minimum-score-triangulation-of-polygon) |
 <!---LeetCode Topics End-->
