@@ -71,6 +71,7 @@ Happy Coding!
 | [0611-valid-triangle-number](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/0611-valid-triangle-number) |
 | [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
 | [1111-minimum-score-triangulation-of-polygon](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1111-minimum-score-triangulation-of-polygon) |
+| [2324-find-triangular-sum-of-an-array](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/2324-find-triangular-sum-of-an-array) |
 ## Two Pointers
 |  |
 | ------- |
@@ -93,8 +94,17 @@ Happy Coding!
 |  |
 | ------- |
 | [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
+| [2324-find-triangular-sum-of-an-array](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/2324-find-triangular-sum-of-an-array) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [1111-minimum-score-triangulation-of-polygon](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1111-minimum-score-triangulation-of-polygon) |
+## Simulation
+|  |
+| ------- |
+| [2324-find-triangular-sum-of-an-array](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/2324-find-triangular-sum-of-an-array) |
+## Combinatorics
+|  |
+| ------- |
+| [2324-find-triangular-sum-of-an-array](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/2324-find-triangular-sum-of-an-array) |
 <!---LeetCode Topics End-->
