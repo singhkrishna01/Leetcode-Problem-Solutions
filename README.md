@@ -94,6 +94,7 @@ Happy Coding!
 |  |
 | ------- |
 | [1018-largest-perimeter-triangle](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1018-largest-perimeter-triangle) |
+| [1642-water-bottles](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1642-water-bottles) |
 | [2324-find-triangular-sum-of-an-array](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/2324-find-triangular-sum-of-an-array) |
 ## Dynamic Programming
 |  |
@@ -102,6 +103,7 @@ Happy Coding!
 ## Simulation
 |  |
 | ------- |
+| [1642-water-bottles](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/1642-water-bottles) |
 | [2324-find-triangular-sum-of-an-array](https://github.com/singhkrishna01/Leetcode-Problem-Solutions/tree/master/2324-find-triangular-sum-of-an-array) |
 ## Combinatorics
 |  |
