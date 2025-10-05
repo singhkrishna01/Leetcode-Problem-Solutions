@@ -6,6 +6,7 @@ class Solution:
             visited.add(cell)
             r, c = cell
             for nr, nc in [(r-1, c), (r+1, c), (r, c-1), (r, c+1)]:
+                if 0 <= nr < rows and 0 <= nc < cols and heights[nr][nc] >= heights[r][c]:
                     dfs((nr, nc), visited)
 
         rows, cols = len(heights), len(heights[0])
