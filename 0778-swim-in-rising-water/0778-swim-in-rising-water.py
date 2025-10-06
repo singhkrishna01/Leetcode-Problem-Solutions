@@ -14,5 +14,6 @@ class Solution:
             
             for di, dj in DIRS:
                 if (i + di, j + dj) not in visited and 0 <= i + di < len(grid) and 0 <= j + dj < len(grid[0]):
+                    visited.add((i + di, j + dj))
                     heappush(heap, (grid[i + di][j + dj], i + di, j + dj))
         
