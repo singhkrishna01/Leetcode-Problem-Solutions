@@ -8,6 +8,7 @@ class Solution:
 
         for num in nums:
             lower_bound = num - k
+            upper_bound = num + k
             if last_picked < lower_bound:
                 last_picked = lower_bound
             else:
